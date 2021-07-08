@@ -21,9 +21,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MKViewController">
             <connections>
                 <outlet property="authorizeButton" destination="Q4f-gc-4IS" id="H85-O5-W3w"/>
-                <outlet property="button1" destination="oXi-o8-1kp" id="Mic-1T-Zbt"/>
-                <outlet property="button2" destination="1yr-Oj-5qO" id="Ueb-AP-xMW"/>
-                <outlet property="button3" destination="tjj-2B-ECC" id="mAV-rk-VLb"/>
+                <outlet property="button1" destination="oXi-o8-1kp" id="vZ1-Od-BOG"/>
+                <outlet property="button2" destination="1yr-Oj-5qO" id="w16-SM-jjD"/>
+                <outlet property="button3" destination="tjj-2B-ECC" id="uAm-9S-TEg"/>
                 <outlet property="loginTextField" destination="hcW-j4-zOu" id="RI0-n8-uO5"/>
                 <outlet property="passwordTextField" destination="c2e-86-zer" id="lVM-KW-7bx"/>
                 <outlet property="secureHuita" destination="IrI-CM-JGw" id="KRn-0r-ZUU"/>
@@ -53,7 +53,7 @@
                     </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSSchool" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bge-eR-tEt">
-                    <rect key="frame" x="36" y="80" width="303" height="43"/>
+                    <rect key="frame" x="36" y="80" width="303" height="42"/>
                     <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="36"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -99,6 +99,7 @@
                                     </state>
                                     <connections>
                                         <action selector="secureButtonAction:" destination="-1" eventType="touchUpInside" id="7pu-Rs-fad"/>
+                                        <action selector="touchDownSecureButton:" destination="-1" eventType="touchDown" id="G3K-ep-OH5"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yr-Oj-5qO">
@@ -112,6 +113,7 @@
                                     </state>
                                     <connections>
                                         <action selector="secureButtonAction:" destination="-1" eventType="touchUpInside" id="oY2-WI-Y4R"/>
+                                        <action selector="touchDownSecureButton:" destination="-1" eventType="touchDown" id="bex-kL-Oby"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjj-2B-ECC">
@@ -122,6 +124,7 @@
                                     </state>
                                     <connections>
                                         <action selector="secureButtonAction:" destination="-1" eventType="touchUpInside" id="OwW-C2-GAH"/>
+                                        <action selector="touchDownSecureButton:" destination="-1" eventType="touchDown" id="tVL-DG-Ntk"/>
                                     </connections>
                                 </button>
                             </subviews>

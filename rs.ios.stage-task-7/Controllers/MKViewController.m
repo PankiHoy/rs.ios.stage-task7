@@ -87,25 +87,25 @@
     self.authorizeButton.clipsToBounds = YES;
 }
 
--(void)changeToHighlighted:(BOOL)check {
-    [self.authorizeButton setHighlighted:YES];
+-(void)changeToHighlighted:(BOOL)check sender:(UIButton*)sender {
+    [sender setHighlighted:YES];
     if (check) {
-        self.authorizeButton.backgroundColor = [[UIColor colorNamed:@"Little Boy Blue"] colorWithAlphaComponent:0.2];
-        self.authorizeButton.titleLabel.alpha = 0.4;
+        sender.backgroundColor = [[UIColor colorNamed:@"Little Boy Blue"] colorWithAlphaComponent:0.2];
+        sender.titleLabel.alpha = 0.4;
     } else {
-        self.authorizeButton.backgroundColor = [UIColor whiteColor];
-        self.authorizeButton.titleLabel.alpha = 1;
+        sender.backgroundColor = [UIColor whiteColor];
+        sender.titleLabel.alpha = 1;
     }
 }
 
 #pragma mark - Actions
 - (IBAction)buttonAction:(id)sender {
     [self login];
-    [self changeToHighlighted:FALSE];
+    [self changeToHighlighted:FALSE sender:self.authorizeButton];
 }
 
 - (IBAction)touchDownButton:(id)sender {
-    [self changeToHighlighted: TRUE];
+    [self changeToHighlighted: TRUE sender:self.authorizeButton];
 }
 
 - (IBAction)TextFieldAction:(id)sender {
@@ -117,6 +117,7 @@
     NSMutableString *string = [[NSMutableString alloc] init];
     for (int i=0; i<self.secureDigitsMutableArray.count; i++) {
         [string appendString:self.secureDigitsMutableArray[i]];
+        [self changeToHighlighted:FALSE sender:sender];
     }
     [self.secureTextField setText:string];
     
@@ -130,9 +131,11 @@
             self.secureHuita.layer.borderColor = [UIColor colorNamed:@"Venetian Red"].CGColor;
         }
     }
-    
 }
 
+- (IBAction)touchDownSecureButton:(id)sender{
+    [self changeToHighlighted:YES sender:sender];
+}
 
 #pragma mark - Login
 -(void) login {

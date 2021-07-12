@@ -20,14 +20,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MKViewController">
             <connections>
-                <outlet property="authorizeButton" destination="Q4f-gc-4IS" id="H85-O5-W3w"/>
-                <outlet property="button1" destination="oXi-o8-1kp" id="vZ1-Od-BOG"/>
-                <outlet property="button2" destination="1yr-Oj-5qO" id="w16-SM-jjD"/>
-                <outlet property="button3" destination="tjj-2B-ECC" id="uAm-9S-TEg"/>
+                <outlet property="authorizeButton" destination="Q4f-gc-4IS" id="E0W-gS-dCi"/>
                 <outlet property="loginTextField" destination="hcW-j4-zOu" id="RI0-n8-uO5"/>
                 <outlet property="passwordTextField" destination="c2e-86-zer" id="lVM-KW-7bx"/>
                 <outlet property="secureHuita" destination="IrI-CM-JGw" id="KRn-0r-ZUU"/>
-                <outlet property="secureTextField" destination="JIK-tw-nIt" id="VpR-eT-dPo"/>
+                <outlet property="secureTextField" destination="JIK-tw-nIt" id="d5j-1x-0zN"/>
                 <outlet property="view" destination="iN0-l3-epB" id="zbp-pW-I0n"/>
             </connections>
         </placeholder>
@@ -36,20 +33,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hcW-j4-zOu">
+                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hcW-j4-zOu" customClass="MKTextField">
                     <rect key="frame" x="36" y="223" width="303" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="alphabet" textContentType="username"/>
                     <connections>
-                        <action selector="TextFieldAction:" destination="-1" eventType="editingChanged" id="gSC-O7-5xV"/>
+                        <action selector="textFieldAction:" destination="-1" eventType="editingChanged" id="yJH-pd-kOT"/>
                     </connections>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-86-zer">
+                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-86-zer" customClass="MKTextField">
                     <rect key="frame" x="36" y="287" width="303" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES" textContentType="password"/>
                     <connections>
-                        <action selector="TextFieldAction:" destination="-1" eventType="editingChanged" id="tyd-ua-m9E"/>
+                        <action selector="textFieldAction:" destination="-1" eventType="editingChanged" id="Hx5-e9-5UH"/>
                     </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSSchool" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bge-eR-tEt">
@@ -58,7 +55,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4f-gc-4IS">
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4f-gc-4IS" customClass="MKAuthorizeButton">
                     <rect key="frame" x="110" y="398" width="155" height="42"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="42" id="Dyw-ns-XRf"/>
@@ -73,10 +70,10 @@
                         <action selector="touchDownButton:" destination="-1" eventType="touchDown" id="ZHd-qJ-WWb"/>
                     </connections>
                 </button>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrI-CM-JGw">
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrI-CM-JGw" customClass="MKSecureHuita">
                     <rect key="frame" x="69.5" y="507" width="236" height="110"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="clip" numberOfLines="18" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIK-tw-nIt">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="clip" numberOfLines="18" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIK-tw-nIt" customClass="MKSecureTextField">
                             <rect key="frame" x="80.5" y="15" width="75" height="21.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="75" id="NMa-9k-iwD"/>
@@ -88,7 +85,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MxF-WA-Dlp">
                             <rect key="frame" x="23" y="45" width="190" height="50"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXi-o8-1kp">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXi-o8-1kp" customClass="MKSecureButton">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="50" id="vPW-gN-FCd"/>
@@ -98,11 +95,11 @@
                                         <color key="titleColor" name="Little Boy Blue"/>
                                     </state>
                                     <connections>
-                                        <action selector="secureButtonAction:" destination="-1" eventType="touchUpInside" id="7pu-Rs-fad"/>
-                                        <action selector="touchDownSecureButton:" destination="-1" eventType="touchDown" id="G3K-ep-OH5"/>
+                                        <action selector="touchDownSecureButton:" destination="-1" eventType="touchDown" id="POw-uR-Y8z"/>
+                                        <action selector="touchUpSecureButtonAction:" destination="-1" eventType="touchUpInside" id="b8x-U6-28Y"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yr-Oj-5qO">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yr-Oj-5qO" customClass="MKSecureButton">
                                     <rect key="frame" x="70" y="0.0" width="50" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="50" id="ORq-Co-AJL"/>
@@ -112,19 +109,19 @@
                                         <color key="titleColor" name="Little Boy Blue"/>
                                     </state>
                                     <connections>
-                                        <action selector="secureButtonAction:" destination="-1" eventType="touchUpInside" id="oY2-WI-Y4R"/>
-                                        <action selector="touchDownSecureButton:" destination="-1" eventType="touchDown" id="bex-kL-Oby"/>
+                                        <action selector="touchDownSecureButton:" destination="-1" eventType="touchDown" id="KOl-cH-mbF"/>
+                                        <action selector="touchUpSecureButtonAction:" destination="-1" eventType="touchUpInside" id="rkE-Vb-h5J"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjj-2B-ECC">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjj-2B-ECC" customClass="MKSecureButton">
                                     <rect key="frame" x="140" y="0.0" width="50" height="50"/>
                                     <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="24"/>
                                     <state key="normal" title="3">
                                         <color key="titleColor" name="Little Boy Blue"/>
                                     </state>
                                     <connections>
-                                        <action selector="secureButtonAction:" destination="-1" eventType="touchUpInside" id="OwW-C2-GAH"/>
-                                        <action selector="touchDownSecureButton:" destination="-1" eventType="touchDown" id="tVL-DG-Ntk"/>
+                                        <action selector="touchDownSecureButton:" destination="-1" eventType="touchDown" id="0dJ-92-bhr"/>
+                                        <action selector="touchUpSecureButtonAction:" destination="-1" eventType="touchUpInside" id="eax-bW-6PY"/>
                                     </connections>
                                 </button>
                             </subviews>

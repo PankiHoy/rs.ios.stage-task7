@@ -10,10 +10,11 @@
 #import "MKAuthorizeButton.h"
 #import "UIButton+Highlighted.h"
 #import "MKSecureHuita.h"
+#import "MKSuccessProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MKViewController : UIViewController <UITextFieldDelegate>
+@interface MKViewController : UIViewController <UITextFieldDelegate, MKSuccessProtocol>
 
 @end
 

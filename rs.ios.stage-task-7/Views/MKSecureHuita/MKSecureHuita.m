@@ -22,10 +22,13 @@
 -(void)setError {
     [self.arrayOfDigits removeAllObjects];
     self.layer.borderColor = [UIColor colorNamed:@"Venetian Red"].CGColor;
+    self.secureTextField.text = @"_";
 }
 
 -(void)setSuccess {
     self.layer.borderColor = [UIColor colorNamed:@"Turquoise Green"].CGColor;
+    [self.delegate success];
 }
 
 @end
+

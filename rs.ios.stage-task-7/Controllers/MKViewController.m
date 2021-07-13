@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureKeyboard];
+    self.secureHuita.delegate = self;
+    self.secureHuita.secureTextField = self.secureTextField;
 }
 
 #pragma mark - Keyboard on tap and return hiding configuration
@@ -61,11 +63,11 @@
     [self.secureHuita.arrayOfDigits addObject:[NSString stringWithFormat:@"%@", sender.titleLabel.text]];
     [sender changeToHighlighted:FALSE];
     
-    [self.secureTextField setText:[self.secureHuita.arrayOfDigits componentsJoinedByString:@" "]];
+    [self.secureHuita.secureTextField setText:[self.secureHuita.arrayOfDigits componentsJoinedByString:@" "]];
     
     if (self.secureHuita.arrayOfDigits.count == 3) {
         if ([[self.secureHuita.arrayOfDigits componentsJoinedByString:@""] isEqual:@"132"]) {
-            [self success];
+            [self.secureHuita setSuccess];
         } else {
             [self.secureHuita setError];
         }
@@ -98,23 +100,22 @@
 }
 
 - (void)success {
-    [self.secureHuita setSuccess];
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"WELCOME"
                                                                              message:@"You are successfully authorized!" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"Refresh"
                                                      style:UIAlertActionStyleDefault
-                                                   handler:^(UIAlertAction * _Nonnull action) {
-        [self.loginTextField setReady];
-        [self.loginTextField setText:@""];
-        [self.passwordTextField setReady];
-        [self.passwordTextField setText:@""];
-        self.authorizeButton.enabled = YES;
-        self.authorizeButton.alpha = 1;
-        self.secureHuita.layer.borderColor = [UIColor clearColor].CGColor;
-        self.secureHuita.hidden = YES;
-        [self.secureTextField setText:@"_"];
-        [self.secureHuita.arrayOfDigits removeAllObjects];
-    }];
+                                                handler:^(UIAlertAction * _Nonnull action) {
+    [self.loginTextField setReady];
+    [self.loginTextField setText:@""];
+    [self.passwordTextField setReady];
+    [self.passwordTextField setText:@""];
+    self.authorizeButton.enabled = YES;
+    self.authorizeButton.alpha = 1;
+    self.secureHuita.layer.borderColor = [UIColor clearColor].CGColor;
+    self.secureHuita.hidden = YES;
+    [self.secureHuita.secureTextField setText:@"_"];
+    [self.secureHuita.arrayOfDigits removeAllObjects];
+}];
     [alertController addAction:action];
     [self presentModalViewController:alertController animated:YES];
 }

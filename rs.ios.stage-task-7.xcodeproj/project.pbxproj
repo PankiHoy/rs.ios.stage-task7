@@ -32,6 +32,7 @@
 		FA027A0F269CF05C0002B6CE /* MKSecureTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKSecureTextField.m; sourceTree = "<group>"; };
 		FA027A12269CF0B50002B6CE /* MKSecureButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKSecureButton.h; sourceTree = "<group>"; };
 		FA027A13269CF0B50002B6CE /* MKSecureButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKSecureButton.m; sourceTree = "<group>"; };
+		FA40CE55269DF6AA00BB1295 /* MKSuccessProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKSuccessProtocol.h; sourceTree = "<group>"; };
 		FA7654812697BE470084FB58 /* MKAuthorizeButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKAuthorizeButton.h; sourceTree = "<group>"; };
 		FA7654822697BE470084FB58 /* MKAuthorizeButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKAuthorizeButton.m; sourceTree = "<group>"; };
 		FA7654852697C0B50084FB58 /* UIButton+Highlighted.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Highlighted.h"; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 			children = (
 				FA027A0A269CEFB00002B6CE /* MKSecureHuita.h */,
 				FA027A0B269CEFB00002B6CE /* MKSecureHuita.m */,
+				FA40CE54269DF69A00BB1295 /* MKSuccessProtocol */,
 				FA027A0D269CF0470002B6CE /* MKSecureTextField */,
 				FA027A11269CF0A50002B6CE /* MKSecureButton */,
 			);
@@ -108,6 +110,14 @@
 				FA027A13269CF0B50002B6CE /* MKSecureButton.m */,
 			);
 			path = MKSecureButton;
+			sourceTree = "<group>";
+		};
+		FA40CE54269DF69A00BB1295 /* MKSuccessProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				FA40CE55269DF6AA00BB1295 /* MKSuccessProtocol.h */,
+			);
+			path = MKSuccessProtocol;
 			sourceTree = "<group>";
 		};
 		FA7654802697BDE10084FB58 /* Views */ = {
